@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🔑 API 配置" android:textSize="15sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginBottom="12dp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="B站 UID" android:textSize="13sp"
+                android:textColor="@color/text_secondary" android:layout_marginBottom="4dp" />
+            <EditText android:id="@+id/et_bili_uid"
+                android:layout_width="match_parent" android:layout_height="40dp"
+                android:background="@drawable/input_bg"
+                android:hint="输入B站UID（查询粉丝数）"
+                android:inputType="number" android:paddingHorizontal="12dp"
+                android:textSize="14sp" android:layout_marginBottom="14dp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="天气城市（备选）" android:textSize="13sp"
+                android:textColor="@color/text_secondary" android:layout_marginBottom="4dp" />
+            <EditText android:id="@+id/et_weather_city"
+                android:layout_width="match_parent" android:layout_height="40dp"
+                android:background="@drawable/input_bg"
+                android:hint="例如：北京" android:paddingHorizontal="12dp"
+                android:textSize="14sp" android:layout_marginBottom="14dp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="GitHub 用户名" android:textSize="13sp"
+                android:textColor="@color/text_secondary" android:layout_marginBottom="4dp" />
+            <EditText android:id="@+id/et_github_user"
+                android:layout_width="match_parent" android:layout_height="40dp"
+                android:background="@drawable/input_bg"
+                android:hint="用于查询GitHub信息"
+                android:paddingHorizontal="12dp" android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="📋 内置功能列表" android:textSize="15sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginBottom="8dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🎵 播放音乐（orpheus://深度链接）\n📱 打开手机任意应用（动态识别）\n🌤 天气查询（GPS/自定义坐标/城市）\n📰 Hacker News热点新闻\n📖 DuckDuckGo百科搜索\n🔍 通用搜索\n🔢 数学计算\n📅 时间日期\n📊 B站粉丝数\n⚙️ 自定义问答"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:lineSpacingExtra="5dp" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btn_save_api"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:background="@drawable/btn_primary" android:text="保存配置"
+            android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"
+            android:layout_marginBottom="32dp" android:stateListAnimator="@null" />
+    </LinearLayout>
+</ScrollView>

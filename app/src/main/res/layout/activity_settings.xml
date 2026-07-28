@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 头像 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_default_avatar" />
+            <Button
+                android:id="@+id/btn_pick_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/btn_outline"
+                android:text="更换头像"
+                android:textColor="@color/primary"
+                android:textSize="13sp"
+                android:layout_marginTop="10dp"
+                android:stateListAnimator="@null" />
+        </LinearLayout>
+
+        <!-- 语音唤醒 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🎙 语音唤醒" android:textSize="15sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginBottom="10dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="唤醒词" android:textSize="13sp" android:textColor="@color/text_secondary"
+                android:layout_marginBottom="4dp" />
+            <EditText android:id="@+id/et_wake_word"
+                android:layout_width="match_parent" android:layout_height="40dp"
+                android:background="@drawable/input_bg" android:hint="例如：嘿小助"
+                android:paddingHorizontal="12dp" android:textSize="14sp"
+                android:layout_marginBottom="10dp" />
+            <CheckBox android:id="@+id/cb_wake"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="启用语音唤醒" android:textSize="14sp" android:textColor="@color/text_primary" />
+            <CheckBox android:id="@+id/cb_always_respond"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="始终回应（不需要先说唤醒词）" android:textSize="14sp"
+                android:textColor="@color/text_primary" />
+        </LinearLayout>
+
+        <!-- TTS设置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🔊 语音设置" android:textSize="15sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginBottom="10dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="朗读语言" android:textSize="13sp" android:textColor="@color/text_secondary"
+                android:layout_marginBottom="4dp" />
+            <Spinner android:id="@+id/sp_lang"
+                android:layout_width="match_parent" android:layout_height="40dp"
+                android:background="@drawable/input_bg" android:layout_marginBottom="12dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="语速" android:textSize="13sp" android:textColor="@color/text_secondary" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <SeekBar android:id="@+id/sb_speed"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:max="20" android:progress="10" />
+                <TextView android:id="@+id/tv_speed_val"
+                    android:layout_width="50dp" android:layout_height="wrap_content"
+                    android:text="1.0x" android:textSize="13sp"
+                    android:textColor="@color/text_primary" android:gravity="end" />
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="音调" android:textSize="13sp" android:textColor="@color/text_secondary" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <SeekBar android:id="@+id/sb_pitch"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:max="20" android:progress="10" />
+                <TextView android:id="@+id/tv_pitch_val"
+                    android:layout_width="50dp" android:layout_height="wrap_content"
+                    android:text="1.0x" android:textSize="13sp"
+                    android:textColor="@color/text_primary" android:gravity="end" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 悬浮窗 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🪟 悬浮窗设置" android:textSize="15sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginBottom="10dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="气泡显示时间" android:textSize="13sp" android:textColor="@color/text_secondary" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+                <SeekBar android:id="@+id/sb_bubble_timeout"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:max="8" android:progress="3" />
+                <TextView android:id="@+id/tv_bubble_timeout_val"
+                    android:layout_width="50dp" android:layout_height="wrap_content"
+                    android:text="5秒" android:textSize="13sp"
+                    android:textColor="@color/text_primary" android:gravity="end" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 位置设置 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="📍 位置设置" android:textSize="15sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginBottom="10dp" />
+            <CheckBox android:id="@+id/cb_use_gps"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="使用GPS定位查询天气" android:textSize="14sp"
+                android:textColor="@color/text_primary" android:layout_marginBottom="10dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="自定义坐标点" android:textSize="13sp"
+                android:textColor="@color/text_secondary" android:layout_marginBottom="6dp" />
+            <LinearLayout android:id="@+id/ll_locations"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginBottom="10dp" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical">
+                <EditText android:id="@+id/et_location_name"
+                    android:layout_width="0dp" android:layout_height="40dp"
+                    android:layout_weight="1" android:background="@drawable/input_bg"
+                    android:hint="名称" android:paddingHorizontal="12dp"
+                    android:textSize="13sp" android:layout_marginEnd="8dp" />
+                <EditText android:id="@+id/et_location_lat"
+                    android:layout_width="0dp" android:layout_height="40dp"
+                    android:layout_weight="1" android:background="@drawable/input_bg"
+                    android:hint="纬度" android:inputType="numberDecimal|numberSigned"
+                    android:paddingHorizontal="12dp" android:textSize="13sp" android:layout_marginEnd="8dp" />
+                <EditText android:id="@+id/et_location_lon"
+                    android:layout_width="0dp" android:layout_height="40dp"
+                    android:layout_weight="1" android:background="@drawable/input_bg"
+                    android:hint="经度" android:inputType="numberDecimal|numberSigned"
+                    android:paddingHorizontal="12dp" android:textSize="13sp" />
+            </LinearLayout>
+            <Button android:id="@+id/btn_add_location"
+                android:layout_width="match_parent" android:layout_height="36dp"
+                android:background="@drawable/btn_small" android:text="添加坐标点"
+                android:textColor="#FFFFFF" android:textSize="13sp"
+                android:layout_marginTop="8dp" android:stateListAnimator="@null" />
+        </LinearLayout>
+
+        <!-- 问候语 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="👋 启动问候语" android:textSize="15sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginBottom="8dp" />
+            <EditText android:id="@+id/et_greeting"
+                android:layout_width="match_parent" android:layout_height="80dp"
+                android:background="@drawable/input_bg" android:gravity="top|start"
+                android:padding="12dp" android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button android:id="@+id/btn_save"
+            android:layout_width="match_parent" android:layout_height="48dp"
+            android:background="@drawable/btn_primary" android:text="保存设置"
+            android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"
+            android:layout_marginBottom="32dp" android:stateListAnimator="@null" />
+    </LinearLayout>
+</ScrollView>

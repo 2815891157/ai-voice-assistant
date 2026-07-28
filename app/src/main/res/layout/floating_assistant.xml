@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/bubble_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/bubble_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bubble_bg"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="10dp"
+            android:text=""
+            android:textColor="@color/text_primary"
+            android:textSize="13sp"
+            android:maxWidth="220dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/avatar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/circle_bg"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_avatar" />
+
+        <View
+            android:id="@+id/status_dot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/dot_inactive" />
+    </LinearLayout>
+</FrameLayout>
